@@ -1,6 +1,7 @@
-package houseProject;
+package y.belova.houseProject.apartment;
 
 import org.junit.Assert;
+import y.belova.houseProject.utils.Utils;
 
 public class FlatFactory {
     final private int numberOfOneRoomFlat =1;

@@ -1,4 +1,6 @@
-package houseProject;
+package y.belova.houseProject.floor;
+
+import y.belova.houseProject.apartment.Apartment;
 
 public class Floor {
     private Apartment apartment1;
@@ -6,7 +8,7 @@ public class Floor {
     private Apartment apartment3;
     private Apartment apartment4;
 
-    Floor(Apartment apartment1, Apartment apartment2, Apartment apartment3, Apartment apartment4){
+    public Floor(Apartment apartment1, Apartment apartment2, Apartment apartment3, Apartment apartment4){
         this.apartment1 = apartment1;
         this.apartment2 = apartment2;
         this.apartment3 = apartment3;
@@ -30,7 +32,7 @@ public class Floor {
     }
 
     public double squareOfFloor(){
-        return (apartment1.getSquare()+ apartment2.getSquare()+apartment3.getSquare()+apartment4.getSquare());
+        return (apartment1.getSquare()+apartment2.getSquare()+apartment3.getSquare()+apartment4.getSquare());
     }
 
     public int numberOfPeopleInTheFloor(){

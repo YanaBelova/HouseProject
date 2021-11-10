@@ -1,4 +1,4 @@
-package houseProject;
+package y.belova.houseProject.utils;
 
 import java.util.Scanner;
 

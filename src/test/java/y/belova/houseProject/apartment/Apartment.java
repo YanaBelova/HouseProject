@@ -1,4 +1,4 @@
-package houseProject;
+package y.belova.houseProject.apartment;
 
 public abstract class Apartment {
     private int numberOfRooms;
