@@ -1,6 +1,7 @@
 package y.belova.houseProject.house;
 import org.junit.Assert;
 import y.belova.houseProject.apartment.FlatFactory;
+import y.belova.houseProject.creation.FloorCreation;
 import y.belova.houseProject.floor.Floor;
 import y.belova.houseProject.utils.Utils;
 
@@ -34,12 +35,12 @@ public class House {
         return numberOfAllPeople;
     }
 
-    public Floor createFloor(int numberOfFirstFlat, int numberOfSecondFlat, int numberOfThirdFlat, int numberOfFourFlat){
-        Floor floor = new Floor(flatFactory.createFlat(numberOfFirstFlat), flatFactory.createFlat(numberOfSecondFlat),
-                flatFactory.createFlat(numberOfThirdFlat), flatFactory.createFlat(numberOfFourFlat));
-        Assert.assertTrue("Object Floor isn't created", Utils.objectIsCreated(floor));
-        return floor;
-    }
+//    public Floor createFloor(int numberOfFirstFlat, int numberOfSecondFlat, int numberOfThirdFlat, int numberOfFourFlat){
+//        Floor floor = new Floor(flatFactory.createFlat(numberOfFirstFlat), flatFactory.createFlat(numberOfSecondFlat),
+//                flatFactory.createFlat(numberOfThirdFlat), flatFactory.createFlat(numberOfFourFlat));
+//        Assert.assertTrue("Object Floor isn't created", Utils.objectIsCreated(floor));
+//        return floor;
+//    }
 
     public void createFloors(){
         resultSquare =0;
@@ -50,17 +51,13 @@ public class House {
         do {
             System.out.println(String.format("%s%d%s","Building a floor \nInput number of rooms in the " ,numberOfApartment, " apartment: \n(from 1 to 4)"));
             int first = Utils.inputIntValue();
-            Assert.assertTrue("Entered a number in the wrong range", Utils.enteredValueInTheCorrectRange(first));
             System.out.println(String.format("%s%d%s","Input number of rooms in the " ,(numberOfApartment+1) , " apartment: \n(from 1 to 4)"));
             int second = Utils.inputIntValue();
-            Assert.assertTrue("Entered a number in the wrong range", Utils.enteredValueInTheCorrectRange(second));
             System.out.println(String.format("%s%d%s","Input number of rooms in the " ,(numberOfApartment+2) , " apartment: \n(from 1 to 4)"));
              int third = Utils.inputIntValue();
-            Assert.assertTrue("Entered a number in the wrong range", Utils.enteredValueInTheCorrectRange(third));
             System.out.println(String.format("%s%d%s","Input number of rooms in the " ,(numberOfApartment+3) , " apartment: \n(from 1 to 4)"));
             int forth = Utils.inputIntValue();
-            Assert.assertTrue("Entered a number in the wrong range", Utils.enteredValueInTheCorrectRange(forth));
-            floorList.add(createFloor(first,second,third,forth));
+            floorList.add(FloorCreation.getInstanceFloorCreation().createFloor(first,second,third,forth));
             numberOfApartment +=4;
             System.out.println("Do you want to build another floor? \n Yes - click any symbol           No - click 0");
             int nextFloor = Utils.inputIntValue();

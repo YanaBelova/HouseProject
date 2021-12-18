@@ -1,6 +1,5 @@
 package y.belova.houseProject.main;
 
-import org.junit.Assert;
 import y.belova.houseProject.house.House;
 import y.belova.houseProject.utils.Utils;
 
