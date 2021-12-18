@@ -1,7 +1,6 @@
 package y.belova.houseProject.apartment;
 
-import org.junit.Assert;
-import y.belova.houseProject.utils.Utils;
+import y.belova.houseProject.utils.InputUtils;
 
 public class FlatFactory {
     final private int numberOfOneRoomFlat =1;
@@ -13,30 +12,30 @@ public class FlatFactory {
         switch (numberOfRooms){
             case 1:
                 System.out.println("Input square of one-room apartment: ");
-                double squareOfOneRoomFlat = Utils.inputIntValue();
+                double squareOfOneRoomFlat = InputUtils.inputIntValue();
                 System.out.println("Enter the number of people who live in a one-room apartment: ");
-                int numberOfPeopleInOneRoomFlat = Utils.inputIntValue();
+                int numberOfPeopleInOneRoomFlat = InputUtils.inputIntValue();
                 flat = new OneRoomFlat(numberOfOneRoomFlat, squareOfOneRoomFlat,numberOfPeopleInOneRoomFlat);
                 break;
             case 2:
                 System.out.println("Input square of two-roomed apartment: ");
-                double squareOfTwoRoomedFlat = Utils.inputIntValue();
+                double squareOfTwoRoomedFlat = InputUtils.inputIntValue();
                 System.out.println("Enter the number of people who live in a two-roomed apartment: ");
-                int numberOfPeopleInTwoRoomedFlat = Utils.inputIntValue();
+                int numberOfPeopleInTwoRoomedFlat = InputUtils.inputIntValue();
                 flat = new TwoRoomedFlat(numberOfTwoRoomedFlat, squareOfTwoRoomedFlat,numberOfPeopleInTwoRoomedFlat);
                 break;
             case 3:
                 System.out.println("Input square of three-roomed apartment: ");
-                double squareOfThreeRoomedFlat = Utils.inputIntValue();
+                double squareOfThreeRoomedFlat = InputUtils.inputIntValue();
                 System.out.println("Enter the number of people who live in a three-roomed apartment: ");
-                int numberOfPeopleInThreeRoomedFlat = Utils.inputIntValue();
+                int numberOfPeopleInThreeRoomedFlat = InputUtils.inputIntValue();
                 flat = new ThreeRoomedFlat(numberOfThreeRoomedFlat, squareOfThreeRoomedFlat, numberOfPeopleInThreeRoomedFlat);
                 break;
             case 4:
                 System.out.println("Input square of four-roomed apartment: ");
-                double squareOfFourRoomedFlat = Utils.inputIntValue();
+                double squareOfFourRoomedFlat = InputUtils.inputIntValue();
                 System.out.println("Enter the number of people who live in a four-roomed apartment: ");
-                int numberOfPeopleInFourRoomedFlat = Utils.inputIntValue();
+                int numberOfPeopleInFourRoomedFlat = InputUtils.inputIntValue();
                 flat = new FourRoomedFlat(numberOfFourRoomedFlat, squareOfFourRoomedFlat,numberOfPeopleInFourRoomedFlat);
                 break;
         }
